@@ -76,7 +76,7 @@ var config = {
 
    database.ref('/pools/').on("child_added", function(childSnapshot) {
     console.log(childSnapshot.key);
-    $("#newId").text(childSnapshot.key)
+    $("#newId").text("Your pool key: "+childSnapshot.key)
 
   }) 
 
