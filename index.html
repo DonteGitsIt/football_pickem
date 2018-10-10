@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ultimate Football Pick'Em</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    
+
+</head>
+
+<body>
+
+    <section>
+        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <span class="site-heading-upper text-primary mb-3">The Ultimate Football Pick'em</span>
+            <span class="site-heading-lower">Football Mania</span>
+        </h1>
+    </section>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item active px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href="index.html">
+                            <span class="sr-only">(current)</span>
+                        </a>
+
+                    </li>
+                    <!-- Admin Page-->
+                    <li class="nav-item px-lg-4">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#adminModal">
+                            Create Pool
+                        </button>
+                    </li>
+
+
+                    <li class="nav-item px-lg-4">
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#joinModal">
+                            Join A Legend
+                        </button>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#statModal">
+                            Stats Page
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--  ---------------------------------ADMIN MODAL----------------------------------------------------    -->
+
+    <!-- ADMIN Modal -->
+    <div class="modal fade" id="adminModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- ADMIN Header -->
+                <div class="modal-header text-white bg-primary">
+                    <h4 class="modal-title">Start A League</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h6></h6>
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="name"><b>Select A Week</b></label>
+                                <select class="form-control" id="gameWeek">
+                                    <option class="option" value="1"> Week 1</option>
+                                    <option class="option" value="2"> Week 2</option>
+                                    <option class="option" value="3"> Week 3</option>
+                                    <option class="option" value="4"> Week 4</option>
+                                    <option class="option" value="5"> Week 5</option>
+                                    <option class="option" value="6"> Week 6</option>
+                                    <option class="option" value="7"> Week 7</option>
+                                    <option class="option" value="8"> Week 8</option>
+                                    <option class="option" value="9"> Week 9</option>
+                                    <option class="option" value="10"> Week 10</option>
+                                    <option class="option" value="12"> Week 12</option>
+                                    <option class="option" value="13"> Week 13</option>
+                                    <option class="option" value="14"> Week 14</option>
+                                    <option class="option" value="15"> Week 15</option>
+                                    <option class="option" value="16"> Week 16</option>
+                                    <option class="option" value="17"> Week 17</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col">
+                            <label for="name"><b>Enter Name</b></label>
+                            <input class="input-field" type="text" id="txtName" placeholder=" John D" name="name" required>
+
+                        </div>
+                        <br>
+                        <div class="col">
+                            <label for="email"><b>Enter Email</b></label>
+                            <input class="input-field" type="text" id="txtEmail" placeholder=" youremail@gmail.com" name="email" required>
+
+                        </div>
+                        <br>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button id="add-id-btn" type="button" class="btn btn-warning" data-dismiss="modal">Submit</button>
+                        </div>
+                        <div id="newId"></div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+
+    <!--  ---------------------------------JOIN MODAL----------------------------------------------------    -->
+
+    <!--  ---------------------------------JOIN MODAL----------------------------------------------------    -->
+
+    JOIN Modal
+    <div class="modal fade" id="joinModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- JOIN Header -->
+                <div class="modal-header text-white bg-primary">
+                    <h4 class="modal-title" id="weekPicks">join A League</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <!-- Modal body -->
+                <div class="container">
+                    <div class="modal-row" id="modalDynamic">
+                    </div>
+                    <div class="row">
+
+
+                        <div class="modal-footer" id="modalFoot">
+                            <form>
+                                League Key: <input type="text" name="key" id="keyInput">
+                            </form>
+
+                            <button type="button" class="btn btn-danger" id="modalSubmit1">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--  ---------------------------------STATS ENTRY MODAL----------------------------------------------------    -->
+
+
+    <!-- ENTRY Modal -->
+
+
+
+    <!--  ---------------------------------STATS MODAL----------------------------------------------------    -->
+    <div class="modal fade" id="statModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- STATS Header -->
+                <div class="modal-header text-white bg-primary">
+                    <h4 class="modal-title">Stats </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h6></h6>
+                    <div class="modal-row" id="statsContent">
+                        <br>
+                        <!-- Table -->
+                        <!-- <div class="table-responsive-sm">
+                            <table class="table table-striped w.auto"> -->
+                        <!-- Table head -->
+                        <!-- <thead>
+                                    <tr class="table-info">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                        <th scope="col">Heading</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                    <tr class="table-info">
+                                        <th scope="row">2</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                        <td>Cell</td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+                    </div>
+                    <div class="modal-row">
+
+
+                        <div class="modal-footer" id="modalFoot">
+                            <form>
+                                League Key: <input type="text" name="key" id="keyInput2">
+                            </form>
+
+                            <button type="button" class="btn btn-danger" id="modalSubmit2">Submit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+
+    <script src="getID.js"></script>
+    <script src="api.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
