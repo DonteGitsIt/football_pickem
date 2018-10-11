@@ -74,7 +74,7 @@ var config = {
   // Uploads data to the database
    database.ref('/pools/').push(newId);
 
-   database.ref('/pools/').on("child_added", function(childSnapshot) {
+   database.ref('/pools/').endAt().limitToLast(1).on("child_added", function(childSnapshot) {
     console.log(childSnapshot.key);
     $("#newId").text("Your pool key: "+childSnapshot.key)
 

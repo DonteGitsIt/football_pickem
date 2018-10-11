@@ -11,6 +11,7 @@
 
 var database = firebase.database()
 var key;
+var key2;
 var week;
 var forms = document.forms[0]
 var userPicks = [];
@@ -87,12 +88,29 @@ var makeTable = function () {
 
     }).then(function(response){
         console.log(response)
+        $("#statsHead").html("")
+        $("#statsBody").html("")
         var games = response.week.games
-        var newTableInfo = $("<tr>").attr("class", "table-info")
+        var newTableInfo = $("<tr>")
+        $(newTableInfo).append($("<th>").attr("scope", "col").text("Names"))
         for(var i = 0; i<games.length;i++){
             $(newTableInfo).append($("<th>").attr("scope", "col").text(games[i].away.name+" at "+games[i].home.name))
             $("#statsHead").append(newTableInfo)
         }
+        database.ref("/pools/" + key +"/name").on("child_added", function(snapshot){
+            key2 = snapshot.key
+            var newTableRow = $("<tr>")
+            var nameCol = $("<th>").attr("scope", "row").text(snapshot.key)
+            $(newTableRow).append(nameCol)
+            
+            database.ref("/pools/" + key +"/name/"+key2).on("child_added", function(snapshot2){
+                console.log(snapshot2.val())
+                var teamCol = $("<td>").text(snapshot2.val().pick)
+                $(newTableRow).append(teamCol)
+                $("#statsBody").append(newTableRow)
+            })
+
+        })
     })
 }
 
@@ -127,7 +145,7 @@ $(document).on("click", "#modalSubmit2", function () {
 
 
     var radios = document.getElementsByName('option');
-
+    userPicks = []
     for (var i = 0; i < radios.length; i++) {
         if (radios[i].checked === true) {
             userPicks.push(radios[i].value)
@@ -141,7 +159,8 @@ $(document).on("click", "#modalSubmit2", function () {
     email = $("#email").val().trim()
     for (var i = 0; i < userPicks.length; i++) {
         database.ref("/pools/" + key + "/name/" + firstName + "_" + lastName).push({
-            [i]: userPicks[i]
+            
+            pick: userPicks[i]
         })
     }
     $("#weekPicks").html("Join a Pool")

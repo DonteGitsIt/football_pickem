@@ -75,13 +75,56 @@
                     <li class="nav-item px-lg-4">
 
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#statModal">
-                            Stats Page
+                            Create Stats Table
                         </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <br>
+    <p>
+        <div class="table-responsive-sm">
+            <table class="table table-bordered table-dark">
+                <!-- Table head -->
+                <thead id="statsHead">
+                    <!-- <tr class="table-info">
+                        <th scope="col">#</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                    </tr> -->
+                </thead>
+
+                <tbody id="statsBody">
+                    <!--
+                     <tr>
+                        <th scope="row">1</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    
+                    <tr class="table-info">
+                        <th scope="row">2</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </p>
 
     <!--  ---------------------------------ADMIN MODAL----------------------------------------------------    -->
 
@@ -201,12 +244,12 @@
 
     <!--  ---------------------------------STATS MODAL----------------------------------------------------    -->
     <div class="modal fade" id="statModal">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-left" id="statModalSizing" >
             <div class="modal-content">
 
                 <!-- STATS Header -->
                 <div class="modal-header text-white bg-primary">
-                    <h4 class="modal-title">Stats </h4>
+                    <h4 class="modal-title">Create Table</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -216,44 +259,7 @@
                     <div class="modal-row" id="statsContent">
                         <br>
                         <!-- Table -->
-                        <div class="table-responsive-xs">
-                            <table class="table table-striped w.auto">
-                                <!-- Table head -->
-                                <thead id="statsHead">
-                                    <!-- <tr class="table-info">
-                                        <th scope="col">#</th>
-                                        <th scope="col">Heading</th>
-                                        <th scope="col">Heading</th>
-                                        <th scope="col">Heading</th>
-                                        <th scope="col">Heading</th>
-                                    </tr> -->
-                                </thead>
-
-                                <tbody id="statsBody">
-                                    <!-- <tr>
-                                        <th scope="row">1</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                    <tr class="table-info">
-                                        <th scope="row">2</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                        <td>Cell</td>
-                                    </tr> -->
-                                </tbody>
-                            </table>
-                        </div>
+                        
                         <div class="modal-row">
 
 
@@ -262,7 +268,7 @@
                                     League Key: <input type="text" name="key" id="keyInput2">
                                 </form>
 
-                                <button type="button" class="btn btn-danger" id="statSubmit">Submit</button>
+                                <button type="button" class="btn btn-danger" id="statSubmit" data-dismiss="modal">Submit</button>
                             </div>
                         </div>
 
